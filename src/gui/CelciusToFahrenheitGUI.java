@@ -85,6 +85,11 @@ public class CelciusToFahrenheitGUI extends javax.swing.JFrame {
         lblFahreinheit.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
 
         btnClear.setText("Clear");
+        btnClear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnClearMouseClicked(evt);
+            }
+        });
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
@@ -199,11 +204,7 @@ public class CelciusToFahrenheitGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKonversiActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        tfCelcius.setText("");
-        lblFahreinheit.setText("");
-        lblKelvin.setText("");
-        lblReamur.setText("");
-        tfCelcius.requestFocus();
+      
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void brnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brnExitActionPerformed
@@ -215,6 +216,14 @@ public class CelciusToFahrenheitGUI extends javax.swing.JFrame {
         }
  
     }//GEN-LAST:event_brnExitActionPerformed
+
+    private void btnClearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClearMouseClicked
+        tfCelcius.setText("");
+        lblFahreinheit.setText("");
+        lblKelvin.setText("");
+        lblReamur.setText("");
+        tfCelcius.requestFocus();
+    }//GEN-LAST:event_btnClearMouseClicked
 
     /**
      * @param args the command line arguments
